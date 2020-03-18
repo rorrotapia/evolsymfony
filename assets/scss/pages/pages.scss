@@ -1,0 +1,134 @@
+body {
+  background: #FAF3EC;
+  font-family: 'Arial';
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #748194;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #748194;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #748194;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #748194;
+}
+
+.container {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: calc(50% - 240px);
+  left: calc(40% - 160px);
+  border-radius: 15px 15px 15px 15px;
+}
+
+.c1 {
+  box-shadow: 0 0 10px grey;
+  background-color: white;
+  width: 300px;
+  height: 500px;
+  display: inline-grid;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.c11 {
+  background-image: url('../../images/bg-paris.jpg');
+  background-size: 300px 400px;
+
+  background-repeat: no-repeat;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  z-index: 4;
+  border-radius: 15px 15px 150px 150px;
+}
+
+.s2class {
+  color: #748194;
+  position: absolute;
+  bottom: 0;
+  right: 63%;
+  margin-right: -50%;
+}
+
+.mainhead {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.mainp {
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.c2 {
+  background-color: white;
+  width: 300px;
+  height: 500px;
+  border-radius: 15px;
+  position: absolute;
+  left: 370px;
+  display: inline-grid;
+  padding: 25px;
+}
+
+.username {
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 5px;
+  height: 35px;
+  padding: 6px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: #F6F7F9;
+  color: #748194;
+  font-size: 14px;
+}
+
+.btn {
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 5px;
+  height: 45px;
+  padding: 6px 15px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: #EE9BA3;
+  color: white;
+  font-size: 14px;
+}
+
+.title-form {
+  color: #748194;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.listmission{
+  overflow-y: scroll;
+  height: 200px;
+  padding: 10px;
+}

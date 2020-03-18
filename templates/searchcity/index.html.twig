@@ -3,19 +3,53 @@
 {% block title %}Hello SearchCityController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <form action="">
-        <input type="text" placeholder="Ville">
-        <input type="text" placeholder="Code Postal">
-        <input type="submit" value="Chercher">
-    </form>
-</div>
+    <div class="container">
+        {% if erreurs or erreursml %}
+            <div>
+                {{erreurs}}
+                {{erreursml}}
+            </div>
+        {% else %}
+        <div class="c1">
+            {% if communes %}
+                {% for commune in communes %}
+                    <div class="c11">
+                        <h1 class="mainhead">{{ commune.nom }} - {{ commune.code }}</h1>
+                        <p class="mainp">Population: {{ commune.population }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="c11">
+                    <h1 class="mainhead">Aucune commune trouvé ;'(</h1>
+                </div>
+            {% endif %}
+            {% if missionslocales %}
+                <div class="listmission">
+                    {% for missionlocale in missionslocales['features'] %}
+                        <div>
+                            <p>ML - {{ missionlocale['properties']['adresses'][0]['commune'] }}</p>
+                            {{ missionlocale['properties']['adresses'][0]['lignes'][0] }}
+                            {{ missionlocale['properties']['adresses'][0]['codePostal'] }}
+                            {{ missionlocale['properties']['email'] ?? null }}
+                            {{ missionlocale['properties']['telephone'] }}
+                            {{ missionlocale['properties']['url'] }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div>
+                    <h1>Aucune mission locale a été trouvé ;'(</h1>
+                </div>
+            {% endif %}
+        </div>
+        <div class="c2">
+            <h1 class="title-form">Trouve ta MISSION LOCALE</h1>
+            <form method="post" action="/">
+                <input class="username" type="text" id="city" name="city" placeholder="Ville" minlength="3" required>
+                <input class="username" type="text" id="cp" name="cp" placeholder="Code Postal" maxlength="5" minlength="5" required>
+                <input class="btn" id="chercher" name="chercher" type="submit" value="Chercher">
+            </form>
+        </div>
+        {% endif %}
+    </div>
 {% endblock %}
