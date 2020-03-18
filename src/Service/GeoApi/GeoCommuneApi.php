@@ -24,7 +24,7 @@ class GeoCommuneApi
         //functions nécessaires
         curl_setopt_array($ch, [
             // fixe l'URL et les autres options appropriées
-            CURLOPT_URL => "https://geo.apssi.gouv.fr/communes?q=$this->curl",
+            CURLOPT_URL => "https://geo.api.gouv.fr/communes?q=$this->curl",
             CURLOPT_RETURNTRANSFER => true,
             //CURLOPT_TIMEOUT => 1
         ]);
