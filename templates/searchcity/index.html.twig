@@ -26,13 +26,13 @@
             {% if missionslocales %}
                 <div class="listmission">
                     {% for missionlocale in missionslocales['features'] %}
-                        <div>
-                            <p>ML - {{ missionlocale['properties']['adresses'][0]['commune'] }}</p>
-                            {{ missionlocale['properties']['adresses'][0]['lignes'][0] }}
-                            {{ missionlocale['properties']['adresses'][0]['codePostal'] }}
-                            {{ missionlocale['properties']['email'] ?? null }}
-                            {{ missionlocale['properties']['telephone'] }}
-                            {{ missionlocale['properties']['url'] }}
+                        <div class="item-mission">
+                            <h3>ML - {{ missionlocale['properties']['adresses'][0]['commune'] }}</h3>
+                            {% set addresse =  missionlocale['properties']['adresses'][0]['lignes'][0] ?? null %}
+                            {% set cp =  missionlocale['properties']['adresses'][0]['codePostal'] ?? null %}
+                            <a href="https://www.google.fr/maps/place/{{addresse|url_encode}}+{{cp|url_encode}}">{{ addresse }} - {{ cp }}</a>
+                            <p>{{ missionlocale['properties']['telephone'] ?? null }}</p>
+                            <a href="{{ missionlocale['properties']['url'] ?? null }}">{{ missionlocale['properties']['url'] }}</a>
                         </div>
                     {% endfor %}
                 </div>

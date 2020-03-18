@@ -48,18 +48,10 @@ body {
   background-repeat: no-repeat;
   background-color: white;
   width: 300px;
-  height: 300px;
+  height: 200px;
   display: inline-block;
   z-index: 4;
   border-radius: 15px 15px 150px 150px;
-}
-
-.s2class {
-  color: #748194;
-  position: absolute;
-  bottom: 0;
-  right: 63%;
-  margin-right: -50%;
 }
 
 .mainhead {
@@ -131,4 +123,11 @@ a {
   overflow-y: scroll;
   height: 200px;
   padding: 10px;
+}
+
+.item-mission {
+  padding: 5px;
+  p,a {
+    font-size: 0.8rem;
+  }
 }
