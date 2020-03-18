@@ -12,9 +12,10 @@
     <h1>Hello {{ controller_name }}! ✅</h1>
 
     This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/Rodrigo/Documents/PhpStorm/evolsymfony/src/Controller/SearchCityController.php'|file_link(0) }}">src/Controller/SearchCityController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/Rodrigo/Documents/PhpStorm/evolsymfony/templates/searchcity/index.html.twig'|file_link(0) }}">templates/search_city/index.html.twig</a></code></li>
-    </ul>
+    <form action="">
+        <input type="text" placeholder="Ville">
+        <input type="text" placeholder="Code Postal">
+        <input type="submit" value="Chercher">
+    </form>
 </div>
 {% endblock %}
