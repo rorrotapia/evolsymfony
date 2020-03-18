@@ -3,26 +3,30 @@
 {% block title %}Hello SearchCityController!{% endblock %}
 
 {% block body %}
-    <div class="container">
+    <main class="bg">
+        <div class="container">
         {% if erreurs or erreursml %}
-            <div>
-                {{erreurs}}
-                {{erreursml}}
+            <div class="erreurs">
+                <div class="t-center">
+                    <p>Désolé, le service API est momentanément indisponible</p>
+                    <p>{{erreurs}}</p>
+                    <p>{{erreursml}}</p>
+                </div>
             </div>
         {% else %}
         <div class="c1">
+            <div class="c11">
             {% if communes %}
                 {% for commune in communes %}
-                    <div class="c11">
                         <h1 class="mainhead">{{ commune.nom }} - {{ commune.code }}</h1>
                         <p class="mainp">Population: {{ commune.population }}</p>
-                    </div>
                 {% endfor %}
             {% else %}
-                <div class="c11">
+                <div class="t-center">
                     <h1 class="mainhead">Aucune commune trouvé ;'(</h1>
                 </div>
             {% endif %}
+            </div>
             {% if missionslocales %}
                 <div class="listmission">
                     {% for missionlocale in missionslocales['features'] %}
@@ -37,7 +41,7 @@
                     {% endfor %}
                 </div>
             {% else %}
-                <div>
+                <div class="t-center">
                     <h1>Aucune mission locale a été trouvé ;'(</h1>
                 </div>
             {% endif %}
@@ -51,5 +55,6 @@
             </form>
         </div>
         {% endif %}
-    </div>
+        </div>
+    </main>
 {% endblock %}
