@@ -35,13 +35,11 @@ class FormSearch implements FormInterface
 
     public function validate(): void
     {
-        if(empty($this->city)){
-            //FlashMessage::Add("exclamation", "Le nom est vide");
+        if(empty($this->city) || !preg_match('/[a-zA-Z-ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ_-\s]/', $this->city)) {
             $this->validation = false;
         }
 
-        if(empty($this->cp)){
-            //FlashMessage::Add("exclamation", "L'cp est vide");
+        if (empty($this->cp) || !preg_match('/^\d{5}/', $this->cp)) {
             $this->validation = false;
         }
     }

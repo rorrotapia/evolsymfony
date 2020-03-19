@@ -30,6 +30,8 @@ class SearchCityController extends AbstractController
                     $missionlocale = $curlEtablissement->apiConnexion();
                 }
                 $this->redirectToRoute('searchcity',$data);
+            }else {
+                $msgForm = "Les données sont pas valides";
             }
         }
 
@@ -37,7 +39,8 @@ class SearchCityController extends AbstractController
             'communes' => $communes['donnees'] ?? null,
             'erreurs' => $communes['erreurs'] ?? null,
             'missionslocales' => $missionlocale['donnees'] ?? null,
-            'erreursml' => $missionlocale['erreurs'] ?? null
+            'erreursml' => $missionlocale['erreurs'] ?? null,
+            'msgForm' => $msgForm ?? null
         ]);
     }
 }

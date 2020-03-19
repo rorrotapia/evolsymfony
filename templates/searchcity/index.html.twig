@@ -48,6 +48,9 @@
         </div>
         <div class="c2">
             <h1 class="title-form">Trouve ta MISSION LOCALE</h1>
+            {% if (msgForm) %}
+                <div class="t-center">{{ msgForm }}</div>
+            {% endif %}
             <form method="post" action="/">
                 <input class="username" type="text" id="city" name="city" placeholder="Ville" minlength="3" required>
                 <input class="username" type="text" id="cp" name="cp" placeholder="Code Postal" maxlength="5" minlength="5" required>
