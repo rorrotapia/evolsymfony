@@ -11,4 +11,6 @@ Lorsque le formulaire est envoyé, s’il n’y a aucune erreur, afficher les r�
 ### 2. Service GeoApi: 4 pts. :white_check_mark:
 ### 3. Service EtablissementPublicApi: 7 pts. :white_check_mark:
 ### 4. Résilience: 2 pts. :white_check_mark:
-### 5. Design et optimization du code 50%
+### 5. Design et optimization du code  :white_check_mark:
+
+OK :D
