@@ -10,7 +10,6 @@
     "license": "UNLICENSED",
     "private": true,
     "scripts": {
-        "heroku-postbuild": "encore production",
         "dev-server": "encore dev-server",
         "dev": "encore dev",
         "watch": "encore dev --watch",
