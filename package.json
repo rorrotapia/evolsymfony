@@ -10,10 +10,10 @@
     "license": "UNLICENSED",
     "private": true,
     "scripts": {
-        "heroku-postbuild": "encore --config webpack.config.js",
         "dev-server": "encore dev-server",
         "dev": "encore dev",
         "watch": "encore dev --watch",
-        "build": "encore production --progress"
+        "build": "encore productionΩ",
+        "postinstall": "webpack -p --config webpack.prod.config.js --progress"
     }
 }

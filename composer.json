@@ -43,10 +43,6 @@
         "symfony/polyfill-php56": "*"
     },
     "scripts": {
-        "test": [
-            "@composer install",
-            "echo toto"
-        ],
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
