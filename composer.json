@@ -48,14 +48,10 @@
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
-            "@auto-scripts"
         ],
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "compile": [
-            "node_modules/.bin/encore production"
-        ]
     },
     "conflict": {
         "symfony/symfony": "*"
