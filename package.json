@@ -10,7 +10,10 @@
     "license": "UNLICENSED",
     "private": true,
     "scripts": {
-        
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production"
     },
     "dependencies": {
         "@babel/core": "^7.11.1"
